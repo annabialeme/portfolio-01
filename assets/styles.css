@@ -12,8 +12,10 @@
     padding: 0;
     box-sizing: border-box ;/* Faz com que o padding e margin não aumentam o tamanho do elemento*/
     outline: none;
+    text-decoration: none;
+    border: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif
+    
 }
 
 :root {
@@ -33,4 +35,47 @@ body {
     color: var(--text-color);
 }
 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos um ao lado do outro no eixo horizontal */
+    align-items: center; /* Alinha os elementos no centro no eixo vertical */
+    z-index: 1000;
+}
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;   
+}
 
+.logo:hover {
+    transform: scale(1.03);
+}
+
+.logo span {
+    text-shadow: 0 0 5px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
